@@ -13,8 +13,17 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel ultricies sapien. Duis nec nunc erat. Vivamus eget sem tristique, lacinia mi id, cursus eros.</p>
         <button class="btn btn-primary"  @onclick="() => ModalDialog.Close()">Close</button>
     </div>
+    <Counter OnCounterChanged="UpdateCounter" />
 </ModalDialog>
+<Counter OnCounterChanged="UpdateCounter" />
 
 @code {
     private ModalDialog ModalDialog { get; set; }
+
+    private int counter;
+
+    private void UpdateCounter(int newCounter)
+    {
+        counter = newCounter;
+    }
 }
