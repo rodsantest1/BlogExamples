@@ -3,14 +3,14 @@
     public class CounterState
     {
         public int Count { get; set; }
-        public event Action OnChange;
+        //public event Action OnChange;
 
         public void IncrementCount()
         {
             Count++;
-            NotifyStateChanged();
+            //NotifyStateChanged();
         }
 
-        private void NotifyStateChanged() => OnChange?.Invoke();
+        //private void NotifyStateChanged() => OnChange?.Invoke();
     }
 }
